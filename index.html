@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Assessment Carousel</title>
+<style>
+body{
+	margin:0;
+	padding:0;
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+}
+
+#page{
+	position:relative;
+	margin:0 auto;
+}
+
+#carousel1{
+	position:relative;
+	overflow:hidden;
+	width:100vw;
+	text-align:left
+}
+
+.slide-wrapper{
+	width:300vw;
+	position:relative;
+	overflow:hidden;
+	
+	}
+	
+.slide{
+	width:100vw;
+	display:inline-block;
+	float:left;
+}
+
+.content{
+	width:25%;
+	display:inline-block;
+	padding:0;
+	position:relative
+}
+
+.image{
+	position:relative;
+	z-index:1;
+	top:0;
+	left:0;
+}
+
+.image img{
+	width:100%;
+}
+
+.caption{
+	position:absolute;
+	z-index:2;
+	text-align:center;
+	top:15px;
+	width:100%;
+	background:rgba(255,255,255,.7);
+}
+
+.button{
+	position:absolute;
+	z-index:2;
+	text-align:center;
+	bottom:15px;
+	width:100%;
+	
+	
+}
+
+.carousel-nav{
+	width:100%;
+	text-align:center;
+}
+.carousel-nav a{
+	text-decoration:none;
+	margin:25px 5px;
+	display:inline-block
+}
+
+.carousel-nav a.on{
+	font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+<div id="page">
+
+	<div id="carousel1" class="slider">
+       <div class="slide-wrapper">
+    	  <div class="slide">
+        	<div class="content">
+            	<div class="image"><img src="img/1.jpg" alt="img" /></div>
+                <div class="caption">Glacier Bay</div>
+                <div class="button"><input type="button"  value="click" /></div>
+            
+            </div><div class="content">
+                <div class="image"><img src="img/2.jpg" alt="img" /></div>
+                <div class="caption">Seagull</div>
+                <div class="button"><input type="button"  value="click" /></div>
+            
+            </div><div class="content">
+                <div class="image"><img src="img/3.jpg" alt="img" /></div>
+                <div class="caption">British Columbia</div>
+                <div class="button"><input type="button"  value="click" /></div>
+            
+            </div><div class="content">
+            	<div class="image"><img src="img/4.jpg" alt="img" /></div>
+                <div class="caption">Willow</div>
+                <div class="button"><input type="button"  value="click" /></div>
+            
+            </div>
+        </div>
+        
+        <div class="slide">
+       		<div class="content">
+                <div class="image"><img src="img/5.jpg" alt="img" /></div>
+                <div class="caption">Cloudfall</div>
+                <div class="button"><input type="button"  value="click" /></div>
+            
+            </div><div class="content">
+                <div class="image"><img src="img/6.jpg" alt="img" /></div>
+                <div class="caption">Anchorage</div>
+                <div class="button"><input type="button"  value="click" /></div>
+            
+            </div><div class="content">
+                <div class="image"><img src="img/7.jpg" alt="img" /></div>
+                <div class="caption">Strasburg RR</div>
+                <div class="button"><input type="button"  value="click" /></div>
+            
+            </div><div class="content">
+                <div class="image"><img src="img/1.jpg" alt="img" /></div>
+                <div class="caption">Glacier Bay</div>
+                <div class="button"><input type="button"  value="click" /></div>
+            
+            </div>
+        
+        </div>
+        
+        <div class="slide">
+        	<div class="content">
+            	<div class="image"><img src="img/2.jpg" alt="img" /></div>
+                <div class="caption">Seagull</div>
+                <div class="button"><input type="button"  value="click" /></div>
+            
+            </div><div class="content">
+            	<div class="image"><img src="img/3.jpg" alt="img" /></div>
+                <div class="caption">British Columbia</div>
+                <div class="button"><input type="button"  value="click" /></div>
+            
+            </div><div class="content">
+            	<div class="image"><img src="img/4.jpg" alt="img" /></div>
+                <div class="caption">Willow</div>
+                <div class="button"><input type="button"  value="click" /></div>
+            
+            </div>
+            
+        </div>
+        
+        
+         
+    </div>
+       
+       <div id="carouselNav" class="carousel-nav">
+       	  <input id="btnPrev" type="button"  value="previous" />
+          <a href="#" rel="1" class="on">1</a>
+          <a href="#" rel="2">2</a>
+          <a href="#" rel="3">3</a>
+          <input id="btnNext" type="button"  value="next" />
+       </div>
+   </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="js/carousel.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
