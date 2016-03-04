@@ -10,8 +10,7 @@ function Carousel(name,slider,sliderNav,animationSpeed, autoSpeed){
     var sliderWidth,
         slideWidth,
         offSet,
-        timer,
-	    resizeTimeout;
+        timer;
 		
     this.animateSlider = function(offSet){
         this.slider.animate({
@@ -68,19 +67,10 @@ function Carousel(name,slider,sliderNav,animationSpeed, autoSpeed){
 		
 	}
 	
-	this.init = function(){
+	
+	this.bindEvents = function(){
 		
-		    resizeTimeout = false;
-		    offSet = 0;
-		    sliderWidth = slider.width();
-            slideWidth =  sliderWidth /  this.slider.children().length;
-	        clearInterval(timer);
-			
-			this.sliderNav.children().removeClass('on');
-            this.sliderNav.find('a:first').addClass('on');
-	        this.slider.css('left',offSet + 'px');
-			
-			this.sliderNav.find('a').on('click', function(e){
+		   this.sliderNav.find('a').on('click', function(e){
 				
 				e.preventDefault;
 				_this.carouselSlide($(this));
@@ -106,8 +96,24 @@ function Carousel(name,slider,sliderNav,animationSpeed, autoSpeed){
 		     });
 			
 			 $(window).smartresize(function(){
-  				_this.init();
+  				_this.init(false);
 			   });
+	}
+	this.init = function(firstRun){
+		
+		    if(firstRun){
+				this.bindEvents();
+			}
+		    offSet = 0;
+		    sliderWidth = slider.width();
+            slideWidth =  sliderWidth /  this.slider.children().length;
+	        clearInterval(timer);
+			
+			this.sliderNav.children().removeClass('on');
+            this.sliderNav.find('a:first').addClass('on');
+	        this.slider.css('left',offSet + 'px');
+			
+			
 						
 		    _this.time();
 				

@@ -9,7 +9,7 @@ var App = function($){
     function _init(){
 
 		var carousel = new Carousel('carousel1', $('.slide-wrapper'), $('#carouselNav'), 500, 5000);
-		carousel.init();
+		carousel.init(true);
         
     }
 
